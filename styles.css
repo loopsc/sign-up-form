@@ -1,3 +1,162 @@
-h1 {
-    color: red;
+@font-face {
+    font-family: Norse-Bold;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+:root {
+    --image-sizing: 25vw;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: grey;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    box-shadow: 0 0 3px black;
+}
+
+.image-container {
+    height: 100%;
+    width: var(--image-sizing);
+    box-sizing: border-box;
+}
+
+#background-image {
+    height: 100vh;
+    width: var(--image-sizing);
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.logo-background {
+    width: var(--image-sizing);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 200px;
+    left: 184px;
+}
+
+.logo {
+    width: 100px;
+    height: 130px;
+}
+
+.logo-text {
+    font-family: Norse-Bold, sans-serif;
+    color: rgba(255, 255, 255, 0.788);
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+}
+
+#content-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(235, 233, 233);
+    height: 100vh;
+}
+
+.intro-div {
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+
+p {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.form {
+    background-color: white;
+    padding: 60px;
+    box-shadow: 0 3px 5px rgb(163, 163, 163, 0.5);
+    
+}
+
+.form-row {
+    display: flex;
+    justify-content:start;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 40px;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    font-weight: lighter;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+input {
+    border-radius: 3px;
+    border: 1px solid rgb(107, 107, 107);
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 7px;
+    width: 80%;
+}
+
+input:focus{
+    border-color: rgb(172, 172, 245);
+    box-shadow: 2px 2px lightgray;
+}
+
+input:not(:placeholder-shown):valid {
+    border-color: green;
+}
+
+input:not(:placeholder-shown):invalid {
+    border-color: red;
+}
+
+.bottom {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 12px 28px;
+    font-size: 19px;
+    background-color: #596D48;
+    color: white;
+    border: 0;
+    border-radius: 12px;
+    width: 20%;
+    margin-bottom: 30px;
+}
+
+.login-text {
+    font-size:17px;
+    font-weight: lighter;
 }
